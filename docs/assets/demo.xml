@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tXML>
+    <Message>
+        <Request>
+            <Site></Site>
+            <RequestType></RequestType>
+            <OrderNumber></OrderNumber>
+            <OrderDate></OrderDate>
+            <OrderModifiedDate></OrderModifiedDate>
+            <TaxExemptID></TaxExemptID>
+            <ShipToGroups>
+                <ShipToGroup>
+                    <ShipFrom>
+                        <StreetAddress></StreetAddress>
+                        <City></City>
+                        <State></State>
+                        <County></County>
+                        <PostalCode></PostalCode>
+                        <Country></Country>
+                    </ShipFrom>
+                    <ShipTo>
+                        <ExternalShippingGroupID></ExternalShippingGroupID>
+                        <StreetAddress></StreetAddress>
+                        <City></City>
+                        <State></State>
+                        <County></County>
+                        <PostalCode></PostalCode>
+                        <Country></Country>
+                    </ShipTo>
+                    <Charges>
+                        <Charge>
+                            <ChargeID></ChargeID>
+                            <ChargeCategory></ChargeCategory>
+                            <ChargeAmount></ChargeAmount>
+                            <TaxIncluded></TaxIncluded>
+                        </Charge>
+                    </Charges>
+                </ShipToGroup>
+            </ShipToGroups>
+
+            <HeaderDiscount>
+                <Discount></Discount>
+            </HeaderDiscount>
+
+            <LineItem>
+                <ExternalShippingGroupID></ExternalShippingGroupID>
+                <LineItemNumber></LineItemNumber>
+                <OrderLineDate></OrderLineDate>
+                <OrderLineModifiedDate></OrderLineModifiedDate>
+                <Item></Item>
+                <ProductClass></ProductClass>
+                <OUOM></OUOM>
+                <Quantity></Quantity>
+                <UnitPrice></UnitPrice>
+                <ItemDescription></ItemDescription>
+                <ReferenceField9></ReferenceField9>
+                <BOPUSEligible></BOPUSEligible>
+                <ReferenceField10></ReferenceField10>
+
+                <Discount>
+                    <Discount></Discount>
+                </Discount>
+
+                <ShipFrom>
+                    <StreetAddress></StreetAddress>
+                    <City></City>
+                    <State></State>
+                    <County></County>
+                    <PostalCode></PostalCode>
+                    <Country></Country>
+                </ShipFrom>
+                <ShipTo>
+                    <StreetAddress></StreetAddress>
+                    <City></City>
+                    <State></State>
+                    <County></County>
+                    <PostalCode></PostalCode>
+                    <Country></Country>
+                </ShipTo>
+
+                <LineCharges>
+                    <LineCharge>
+                        <ChargeCategory></ChargeCategory>
+                        <ChargeAmount></ChargeAmount>
+                        <TaxIncluded></TaxIncluded>
+                        <EcoFeeSku></EcoFeeSku>
+                        <SabrixTaxCode></SabrixTaxCode>
+                        <ShipFrom>
+                            <StreetAddress></StreetAddress>
+                            <City></City>
+                            <State></State>
+                            <County></County>
+                            <PostalCode></PostalCode>
+                            <Country></Country>
+                        </ShipFrom>
+                        <ShipTo>
+                            <StreetAddress></StreetAddress>
+                            <City></City>
+                            <State></State>
+                            <County></County>
+                            <PostalCode></PostalCode>
+                            <Country></Country>
+                        </ShipTo>
+                    </LineCharge>
+                </LineCharges>
+                <LineiTemCharges>
+                    <Discount>
+                        <Discount></Discount>
+                    </Discount>
+                </LineiTemCharges>
+            </LineItem>
+        </Request>
+
+
+        <PaymentRequest>
+            <RequestType>GCSettlement</RequestType>
+            <MerchantID>bedbathbey_tst</MerchantID>
+            <MerchantPassword>password</MerchantPassword>
+            <OrderNumber>BBD4000009718</OrderNumber>
+            <Currency>USD</Currency>
+            <PaymentDetail>
+                <PaymentMethod>Gift Card</PaymentMethod>
+                <CardType />
+                <AccountNumber>7777007222709619</AccountNumber>
+                <NameAsOnCard />
+                <CardExpiryMonth />
+                <CardExpiryYear />
+                <SecurityCode>44434643</SecurityCode>
+                <AccountType />
+                <RoutingTransitNumber />
+                <CheckNumber />
+                <PaymentEntryType>Assisted Selling</PaymentEntryType>
+                <AuthIndicator />
+                <BillToDetail>
+                    <BillToFirstName>Ethan</BillToFirstName>
+                    <BillToMiddleName />
+                    <BillToLastName>Aicher</BillToLastName>
+                    <BillToAddressLine1>2300 Windy Ridge Parkway SE</BillToAddressLine1>
+                    <BillToAddressLine2 />
+                    <BillToCity>Atlanta</BillToCity>
+                    <BillToState>GA</BillToState>
+                    <BillToPostalCode>30339</BillToPostalCode>
+                    <BillToCountry>US</BillToCountry>
+                    <BillToPhone />
+                    <BillToEmail>eaicher@manh.com</BillToEmail>
+                    <DriversLicenseNumber />
+                    <DriversLicenseState />
+                    <DriversLicenseCountry />
+                    <BusinessName />
+                    <BusinessTaxID />
+                </BillToDetail>
+                <ReferenceFields>
+                    <ReferenceField1 />
+                    <ReferenceField2 />
+                    <ReferenceField3>0</ReferenceField3>
+                    <ReferenceField4 />
+                    <ReferenceField5 />
+                    <ReferenceField6 />
+                    <ReferenceField7 />
+                    <ReferenceField8 />
+                    <ReferenceField9 />
+                    <ReferenceField10 />
+                    <ReferenceNumber1 />
+                    <ReferenceNumber2 />
+                    <ReferenceNumber3 />
+                    <ReferenceNumber4 />
+                    <ReferenceNumber5 />
+                </ReferenceFields>
+                <PaymentTransactionDetail>
+                    <TransactionType>Settlement</TransactionType>
+                    <RequestedAmount>78.81</RequestedAmount>
+                    <PaymentProcessParameter>Normal</PaymentProcessParameter>
+                    <Bypass>false</Bypass>
+                    <RequestID />
+                    <RequestToken />
+                    <FollowOnID>137918</FollowOnID>
+                    <FollowOnToken>137918</FollowOnToken>
+                    <ReconcillationID />
+                </PaymentTransactionDetail>
+            </PaymentDetail>
+        </PaymentRequest>
+        <Custom>
+            <Order>
+                <OrderNumber>BBD4000009718</OrderNumber>
+                <EnteredLocation>BedBathBeyond</EnteredLocation>
+                <OrderTotal>78.81</OrderTotal>
+                <PaymentDetails>
+                    <PaymentDetail>
+                        <PaymentTransactionDetails>
+                            <PaymentTransactionDetail>
+                                <MerchantID>bedbathbey_tst</MerchantID>
+                                <BilltoIPAddress />
+                            </PaymentTransactionDetail>
+                        </PaymentTransactionDetails>
+                    </PaymentDetail>
+                </PaymentDetails>
+                <OrderLines>
+                    <OrderLine>
+                        <ItemID>17113089</ItemID>
+                        <PriceInfo>
+                            <Price>6.99</Price>
+                        </PriceInfo>
+                        <LineReferenceFields>
+                            <ReferenceField5>1</ReferenceField5>
+                            <ReferenceNumber5 />
+                            <ReferenceField8>6.99</ReferenceField8>
+                        </LineReferenceFields>
+                    </OrderLine>
+                </OrderLines>
+            </Order>
+        </Custom>
+    </Message>
+</tXML>

@@ -1,0 +1,71 @@
+{
+    "success": true,
+    "header": null,
+    "data": {
+        "TaskGroupId": "TKG000002494",
+        "AssignedTo": "mai_user",
+        "TaskGroupDate": "2021-09-06T11:12:29.861",
+        "Group": [
+            {
+                "Items": [
+                    {
+                        "ItemId": "S1002",
+                        "Description": "Ship Item for testing 2",
+                        "Style": "A",
+                        "Color": "TEAL",
+                        "Size": "LG",
+                        "LargeImageURI": "https://manh1.sharepoint.com/:i:/r/sites/MAMatters/SiteAssets/Images/ITNews.jpg?csf=1&web=1&e=AyEIHR",
+                        "SmallImageURI": "https://manh1.sharepoint.com/:i:/r/sites/MAMatters/SiteAssets/Images/ITNews.jpg?csf=1&web=1&e=AyEIHR",
+                        "StoreDepartment": "B Dept",
+                        "UPC": "SAMPS0002",
+                        "OrderedQty": 1.0,
+                        "PickedQty": 0.0,
+                        "UOM": "EA",
+                        "BaseUOM": "EA",
+                        "Brand": "US",
+                        "SecondaryAreaName1": "Dept B",
+                        "SecondaryAreaName2": "Sean BB",
+                        "ItemCodes": [
+                            "SAMPS0002",
+                            "MANUS902"
+                        ],
+                        "ManufacturingAttributes": [
+                            {
+                                "Upc": "8S10020"
+                            }
+                        ],
+                        "StopQuantity": 0.0,
+                        "CustomAttributes": {
+                            "UPC1": "1000-103;1000-104",
+                            "UPC2": "1000-103;1000-104",
+                            "UPC3": "1000-103;1000-104",
+                            "UPC4": "1000-103;1000-104",
+                            "UPC5": "1000-103;1000-104"
+                        },
+                        "ProductClass": "Home",
+                        "IsScanOnly": false
+                    }
+                ],
+                "AreaName1": "1000-103",
+                "AreaName2": "1",
+                "ItemAttributeValue": "S1002",
+                "TotalOrderedQty": 1.0
+            }
+        ],
+        "DeliveryMethodId": "ShipToAddress",
+        "DeviceRfidLocation": null
+    },
+    "messageKey": null,
+    "message": null,
+    "errors": [],
+    "exceptions": [],
+    "messages": {
+        "Message": [],
+        "Size": 0
+    },
+    "rootCause": null,
+    "cloudComponent": "com-manh-cp-storefacade:docker,omni,bbab,side,bbabside,10.81.160.231:8080",
+    "cloudComponentHostName": "fbb5e9cb5b81",
+    "requestUri": null,
+    "statusCode": "OK"
+}
