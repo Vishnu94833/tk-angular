@@ -1,0 +1,34 @@
+{
+    "success": true,
+    "header": null,
+    "data": {
+        "Messages": null,
+        "ProfileId": "BedBathBeyondUS",
+        "ConfigStoreData": "PostDepositPaymentMethods=American Express,LTC,Wire Transfer,E-Check,Arlo,Fire",
+        "UpdatedTimestamp": "2021-08-18T07:20:49.987",
+        "ReferenceField1": null,
+        "ReferenceField2": null,
+        "CreatedBy": "mai_user",
+        "CreatedTimestamp": "2021-08-18T07:20:29.334",
+        "Process": null,
+        "Namespace": null,
+        "UpdatedBy": "mai_user",
+        "ConfigStoreId": "BBAB_EX29",
+        "ContextId": "b6d36eba-eb39-463f-866d-550639b2f8e4",
+        "PK": "6292712293338784041",
+        "Unique_Identifier": "6292712293338784041__BBAB_EX29"
+    },
+    "messageKey": null,
+    "message": null,
+    "errors": [],
+    "exceptions": [],
+    "messages": {
+        "Message": [],
+        "Size": 0
+    },
+    "rootCause": null,
+    "cloudComponent": "com-manh-cp-configstore:docker,omni,bbab,side,bbabside,10.81.160.231:8080",
+    "cloudComponentHostName": "2f560045a9b6",
+    "requestUri": null,
+    "statusCode": "OK"
+}

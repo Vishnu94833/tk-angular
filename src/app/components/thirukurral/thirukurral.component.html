@@ -1,0 +1,39 @@
+<!-- <div fxLayout="row" fxLayoutAlign="space-around center">
+  <div fxLayout="column" fxLayoutAlign="space-around start">
+    <p>{{ vm.chap_tam }}</p>
+    <p>{{ vm.chapgrp_tam }}</p>
+    <p>{{ vm.line1 }} {{ vm.line2 }}</p>
+    <p>{{ vm.sect_tam }}</p>
+    <p>{{ vm.tam_exp }}</p>
+  </div>
+  <div fxLayout="column" fxLayoutAlign="space-around start">
+    <p>{{ vm.chap_eng }}</p>
+    <p>{{ vm.chapgrp_eng }}</p>
+    <p>{{ vm.eng }}</p>
+    <p>{{ vm.sect_eng }}</p>
+    <p>{{ vm.eng_exp }}</p>
+  </div>
+</div> -->
+
+<div style="height: 100%">
+  <mat-card class="example-card">
+    <mat-card-header>
+      <mat-card-title>{{ vm.chap_tam }}</mat-card-title>
+      <mat-card-subtitle>{{ vm.chapgrp_tam }}</mat-card-subtitle>
+    </mat-card-header>
+
+    <mat-card-content>
+      <p>{{ vm.line1 }} {{ vm.line2 }}</p>
+      <p>{{ vm.eng }}</p>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-button>LIKE</button>
+      <button mat-button>SHARE</button>
+    </mat-card-actions>
+  </mat-card>
+</div>
+
+<!-- <div style="display: grid">
+  <p>{{ vm.line1 }} {{ vm.line2 }}</p>
+  <p>{{ vm.eng }}</p>
+</div> -->
