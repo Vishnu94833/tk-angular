@@ -32,13 +32,17 @@ export class ThirukurralComponent implements OnInit {
 
   vm: ThirukkuralModel = new ThirukkuralModel();
   isLoaded: boolean = true;
+  color: string = '#ffffff';
 
   constructor(private dataService: DataService) {}
 
   ngOnInit(): void {
+    // writeData(navigator);
     this.getThirukkural();
 
     setInterval(() => {
+      let randomColor = Math.floor(Math.random() * 16777215).toString(16);
+      this.color = '#' + randomColor;
       this.getThirukkural();
     }, 60000);
 
