@@ -1,0 +1,10 @@
+<div class="houses-container">
+  <mat-card *ngFor="let house of housesList">
+    <mat-card-header>{{ house.slug }}</mat-card-header>
+    <mat-card-title>{{ house.name }}</mat-card-title>
+
+    <mat-card-content *ngFor="let member of house.members">
+      <p>{{ member.name }} {{ member.slug }}</p>
+    </mat-card-content>
+  </mat-card>
+</div>

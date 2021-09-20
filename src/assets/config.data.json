@@ -1,0 +1,43 @@
+[
+    {
+        "ScreenId": "sif-pick-list",
+        "Extensions": [
+            {
+                "ExtensionId": "sif.pick.list.button",
+                "ExtensionDetail": [
+                    {
+                        "ExtensionType": "button",
+                        "ExtensionProperties": {
+                            "Label": "View Upc",
+                            "Sequence": "-2",
+                            "URL": "assets/ext/index.html#viewUpcsPopup?ItemId={ItemId}",
+                            "URLParams": [
+                                {
+                                    "ParamObject": "pickList",
+                                    "ParamName": "Group.0.Items.0.CustomAttributes.UPC1"
+                                },
+                                {
+                                    "ParamObject": "pickList",
+                                    "ParamName": "Group.0.Items.0.CustomAttributes.UPC2"
+                                }
+                            ],
+                            "Button": {
+                                "Type": "button",
+                                "Action": "popup",
+                                "Style": {
+                                    "background-color": "#4a90e2",
+                                    "color": "#ffffff"
+                                }
+                            },
+                            "PopUp": {
+                                "Height": "75vh",
+                                "Width": "90vw",
+                                "EnableBackdropDismiss": true
+                            }
+                        }
+                    }
+                ]
+            }
+        ]
+    }
+]

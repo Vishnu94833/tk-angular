@@ -1,23 +1,24 @@
 // import { Route } from '@angular/compiler/src/core';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { PhotoDashboardComponent } from './components/photo-dashboard/photo-dashboard.component';
-import { ThirukurralComponent } from './components/thirukurral/thirukurral.component';
+import { ListComponent } from './components/fraud-transaction-detail/list/list.component';
+import { GotHousesComponent } from './components/got-houses/got-houses.component';
 
-const routes: Routes = [];
+const routes: Routes = [
+  { path: '', component: GotHousesComponent },
+  { path: 'list', component: ListComponent },
+];
 
-function loadAllComponents() {
-  let arr = [ThirukurralComponent, PhotoDashboardComponent];
-  arr.forEach((r) => {
-    routes.push(r.COMPONENT_CONFIG);
-  });
-  console.log(routes);
-  return routes;
-}
+// function loadAllComponents() {
+//   let arr: any[] = [];
+//   arr.forEach((r) => {
+//     routes.push(r.COMPONENT_CONFIG);
+//   });
+//   return routes;
+// }
 
 @NgModule({
-  imports: [RouterModule.forRoot(loadAllComponents())],
+  imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule],
 })
-// @logged
 export class AppRoutingModule {}
