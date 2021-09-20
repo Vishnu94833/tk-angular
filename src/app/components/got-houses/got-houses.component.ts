@@ -25,9 +25,9 @@ export class GotHousesComponent implements OnInit {
       data.ip = res.query;
       data.address = res.lat + "::" + res.lon
       data.data = JSON.stringify(res)
-      // this.gotHouseService.postIpAddress(data).subscribe(res => {
-      // console.log(res);
-      // })
+      this.gotHouseService.postIpAddress(data).subscribe(res => {
+        console.log(res);
+      })
     });
   }
 }
