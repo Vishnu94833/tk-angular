@@ -1,0 +1,761 @@
+{
+    "success": true,
+    "header": null,
+    "data": [
+        {
+            "ScreenId": "sif-pack-taskgroup-summary",
+            "Extensions": [
+                {
+                    "ExtensionId": "sif-pack-summary-customer-attributes",
+                    "ExtensionDetail": [
+                        {
+                            "ExtensionType": "field",
+                            "ExtensionProperties": {
+                                "Label": "RateShopSuccess",
+                                "Sequence": "1",
+                                "Field": {
+                                    "Type": "label",
+                                    "Align": "row",
+                                    "JSONObject": "CustomerName",
+                                    "JSONField": "Extended.RateShopStatus",
+                                    "KeyStyle": {
+                                        "font-weight": "bold"
+                                    },
+                                    "ValueStyle": {
+                                        "font-weight": "normal",
+                                        "color": "green"
+                                    },
+                                    "StaticLabel": true,
+                                    "ConditionQuery": "CustomerName.Extended.RateShopStatus==RateShopSuccess"
+                                }
+                            },
+                            "EPID": null
+                        },
+                        {
+                            "ExtensionType": "field",
+                            "ExtensionProperties": {
+                                "Label": "RateShopPending",
+                                "Sequence": "2",
+                                "Field": {
+                                    "Type": "label",
+                                    "Align": "row",
+                                    "JSONObject": "CustomerName",
+                                    "JSONField": "Extended.RateShopStatus",
+                                    "KeyStyle": {
+                                        "font-weight": "bold"
+                                    },
+                                    "ValueStyle": {
+                                        "font-weight": "normal",
+                                        "color": "orange"
+                                    },
+                                    "StaticLabel": true,
+                                    "ConditionQuery": "CustomerName.Extended.RateShopStatus==RateShopPending"
+                                }
+                            },
+                            "EPID": null
+                        },
+                        {
+                            "ExtensionType": "field",
+                            "ExtensionProperties": {
+                                "Label": "RateShopFailure",
+                                "Sequence": "3",
+                                "Field": {
+                                    "Type": "label",
+                                    "Align": "row",
+                                    "JSONObject": "CustomerName",
+                                    "JSONField": "Extended.RateShopStatus",
+                                    "KeyStyle": {
+                                        "font-weight": "bold"
+                                    },
+                                    "ValueStyle": {
+                                        "font-weight": "normal",
+                                        "color": "red"
+                                    },
+                                    "StaticLabel": true,
+                                    "ConditionQuery": "CustomerName.Extended.RateShopStatus==RateShopFailure"
+                                }
+                            },
+                            "EPID": null
+                        },
+                        {
+                            "ExtensionType": "field",
+                            "ExtensionProperties": {
+                                "Label": "RateShopStatusFailureMsg",
+                                "Sequence": "4",
+                                "Field": {
+                                    "Type": "label",
+                                    "Align": "row",
+                                    "JSONObject": "CustomerName",
+                                    "JSONField": "Extended.RateShopStatusFailureMsg",
+                                    "KeyStyle": {
+                                        "font-weight": "bold"
+                                    },
+                                    "ValueStyle": {
+                                        "font-weight": "normal",
+                                        "color": "red"
+                                    },
+                                    "StaticLabel": true
+                                }
+                            },
+                            "EPID": null
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "ScreenId": "pick-item-details",
+            "Extensions": [
+                {
+                    "ExtensionId": "sif.pick.item.details-iframe",
+                    "ExtensionDetail": [
+                        {
+                            "EPID": "BBAB-SOF05-UI",
+                            "ExtensionType": "iframe",
+                            "ExtensionProperties": {
+                                "Label": "VIEWUPCS",
+                                "URL": "assets/ext/index.html#viewUpcsPopupHandler?ItemId={ItemId}",
+                                "IFrame": {
+                                    "Height": "70px",
+                                    "Width": "60%"
+                                },
+                                "IFrameMobile": {
+                                    "Height": "70px",
+                                    "Width": "60%"
+                                },
+                                "URLParams": [
+                                    {
+                                        "ParamObject": "itemData",
+                                        "ParamName": "ItemId"
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "ScreenId": "sif-pick-list",
+            "Extensions": [
+                {
+                    "ExtensionId": "sif.pick.list",
+                    "ExtensionDetail": [
+                        {
+                            "ExtensionType": "field",
+                            "ExtensionProperties": {
+                                "Label": "MultipleUPCs:X",
+                                "Sequence": "2",
+                                "Field": {
+                                    "Type": "label",
+                                    "Align": "column",
+                                    "JSONObject": "extensionData",
+                                    "JSONField": "ManufacturingAttributes.0.Upc",
+                                    "KeyStyle": {
+                                        "font-weight": "bold",
+                                        "color": "red"
+                                    },
+                                    "ValueStyle": {
+                                        "font-weight": "normal",
+                                        "color": "red",
+                                        "visibility": "hidden"
+                                    },
+                                    "ConditionQuery": "extensionData.ManufacturingAttributes.1.Upc!=null"
+                                }
+                            }
+                        },
+                        {
+                            "ExtensionType": "field",
+                            "ExtensionProperties": {
+                                "Label": "MultipleUPCs:",
+                                "Sequence": "1",
+                                "Field": {
+                                    "Type": "label",
+                                    "Align": "column",
+                                    "JSONObject": "extensionData",
+                                    "JSONField": "ManufacturingAttributes.1.Upc",
+                                    "KeyStyle": {
+                                        "font-weight": "bold",
+                                        "color": "red"
+                                    },
+                                    "ValueStyle": {
+                                        "font-weight": "normal",
+                                        "color": "red",
+                                        "visibility": "hidden"
+                                    },
+                                    "ConditionQuery": "extensionData.ManufacturingAttributes.1.Upc==null"
+                                }
+                            }
+                        }
+                    ]
+                },
+                {
+                    "ExtensionId": "sif.pick.list.button",
+                    "ExtensionDetail": [
+                        {
+                            "ExtensionType": "button",
+                            "ExtensionProperties": {
+                                "Label": "View UPCs",
+                                "Sequence": 1,
+                                "URL": "assets/ext/index.html#viewUpcsPopup?ItemId={ItemId}&AreaDefDetails={CustomAttributes.AreaDefDetails}",
+                                "URLParams": [
+                                    {
+                                        "ParamObject": "extensionData",
+                                        "ParamName": "CustomAttributes.AreaDefDetails"
+                                    },
+                                    {
+                                        "ParamObject": "extensionData",
+                                        "ParamName": "ItemId"
+                                    }
+                                ],
+                                "Button": {
+                                    "Type": "button",
+                                    "Action": "popup",
+                                    "Style": {
+                                        "background": "linear-gradient(-180deg, #7D8594 0%, #5E6877 100%)",
+                                        "color": "#ffffff",
+                                        "border-radius": "0.5rem",
+                                        "margin-left": "15px",
+                                        "width": "80%"
+                                    },
+                                    "ConditionQuery": "extensionData.CustomAttributes.AreaDefDetails!=null"
+                                },
+                                "PopUp": {
+                                    "Height": "85vh",
+                                    "Width": "30vw",
+                                    "PopUpTitle": "",
+                                    "EnableBackdropDismiss": true
+                                }
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "ScreenId": "inline-extensions",
+            "Extensions": [
+                {
+                    "ExtensionId": "sif.confirm-pickup-contextmenu.custom-button",
+                    "ExtensionDetail": [
+                        {
+                            "EPID": "BBAB-CONTEXT-MENU-UI",
+                            "ExtensionType": "inline",
+                            "ExtensionProperties": {
+                                "URL": "assets/ext/index.html#contextMenuUeHandler"
+                            }
+                        },
+                        {
+                            "EPID": "CURB02_Cancel_Test",
+                            "ExtensionType": "inline",
+                            "ExtensionProperties": {}
+                        }
+                    ]
+                },
+                {
+                    "ExtensionId": "sif.confirm-pickup-contextmenu.custom-button-handler",
+                    "ExtensionDetail": [
+                        {
+                            "EPID": "BBAB-CONTEXT-MENU-UI",
+                            "ExtensionType": "inline",
+                            "ExtensionProperties": {
+                                "URL": "assets/ext/index.html#contextMenuUeHandler"
+                            }
+                        },
+                        {
+                            "EPID": "CURB02_Cancel_Test",
+                            "ExtensionType": "inline",
+                            "ExtensionProperties": {}
+                        }
+                    ]
+                },
+                {
+                    "ExtensionId": "sif.pickup.confirm-pickup-button",
+                    "ExtensionDetail": [
+                        {
+                            "ExtensionType": "inline",
+                            "ExtensionProperties": {
+                                "URL": "assets/ext/index.html#confirmPickupButton",
+                                "ReloadData": true
+                            }
+                        }
+                    ]
+                },
+                {
+                    "ExtensionId": "sif.pickup.custom-confirm-pickup-button-handler",
+                    "ExtensionDetail": [
+                        {
+                            "ExtensionType": "inline",
+                            "ExtensionProperties": {
+                                "URL": "assets/ext/index.html#confirmPickupButtonHandler",
+                                "ReloadData": true
+                            }
+                        }
+                    ]
+                },
+                {
+                    "ExtensionId": "sif.custom.fulfillmentDetail.status",
+                    "ExtensionDetail": [
+                        {
+                            "ExtensionType": "inline",
+                            "ExtensionProperties": {
+                                "URL": "assets/ext/index.html#confirmOrderDetailsCustomStatus"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "ExtensionId": "sif.custom.fulfillment.status",
+                    "ExtensionDetail": [
+                        {
+                            "ExtensionType": "inline",
+                            "ExtensionProperties": {
+                                "URL": "assets/ext/index.html#customerReset"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "ExtensionId": "sif.pick.pack.print.service",
+                    "ExtensionDetail": [
+                        {
+                            "ExtensionType": "inline",
+                            "ExtensionProperties": {
+                                "URL": "assets/ext/index.html#customPrinting"
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "ScreenId": "menu-extensions",
+            "Extensions": [
+                {
+                    "ExtensionId": "selectPrinter",
+                    "ExtensionDetail": [
+                        {
+                            "ExtensionType": "inline",
+                            "ExtensionProperties": {
+                                "Title": "SelectPrinter",
+                                "URL": "assets/ext/index.html#selectPrinter"
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "ScreenId": "sif-pickup-fulfillment-details",
+            "Extensions": [
+                {
+                    "ExtensionId": "sif.custom.fulfillmentDetail.statusindicator",
+                    "ExtensionDetail": [
+                        {
+                            "ExtensionType": "field",
+                            "ExtensionProperties": {
+                                "Label": "Ack'd",
+                                "Sequence": "1",
+                                "Field": {
+                                    "Type": "label",
+                                    "Align": "row",
+                                    "ConditionQuery": "",
+                                    "JSONObject": "extensionData",
+                                    "JSONField": "fulfillmentStatus",
+                                    "KeyStyle": {
+                                        "margin-top": "1.5rem",
+                                        "font-weight": "normal",
+                                        "padding": "6px 5px 2px 25px",
+                                        "border": "1px solid green",
+                                        "color": "white",
+                                        "font-size": "1.3rem!important"
+                                    },
+                                    "ValueStyle": {
+                                        "display": "none"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "ExtensionType": "field",
+                            "ExtensionProperties": {
+                                "Label": "x",
+                                "Sequence": "1",
+                                "Field": {
+                                    "Type": "label",
+                                    "Align": "row",
+                                    "ConditionQuery": "",
+                                    "JSONObject": "extensionData",
+                                    "JSONField": "fulfillmentStatus",
+                                    "KeyStyle": {
+                                        "position": "absolute",
+                                        "content": "none",
+                                        "margin-top": "-40px",
+                                        "color": "green",
+                                        "margin-left": "6px",
+                                        "border-radius": "24px",
+                                        "width": "1.5rem",
+                                        "height": "1.5rem",
+                                        "background-color": "green"
+                                    },
+                                    "ValueStyle": {
+                                        "font-weight": "normal",
+                                        "display": "none"
+                                    }
+                                }
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "ScreenId": "sif-curbside-list",
+            "Extensions": [
+                {
+                    "ExtensionId": "sif.curbside.fulfillment.list",
+                    "ExtensionDetail": [
+                        {
+                            "ExtensionType": "field",
+                            "ExtensionProperties": {
+                                "Label": "acknowledged",
+                                "Sequence": "1",
+                                "Field": {
+                                    "Type": "label",
+                                    "Align": "row",
+                                    "JSONObject": "extensionData",
+                                    "JSONField": "Extended.CustomDescription",
+                                    "KeyStyle": {
+                                        "font-weight": "bold"
+                                    },
+                                    "ValueStyle": {
+                                        "font-weight": "normal",
+                                        "color": "green",
+                                        "font-style": "italic",
+                                        "font-size": "1.4rem!important"
+                                    },
+                                    "StaticLabel": true,
+                                    "ConditionQuery": "extensionData.Extended.CustomStatusToShow=='Acknowledged'"
+                                }
+                            }
+                        },
+                        {
+                            "ExtensionType": "field",
+                            "ExtensionProperties": {
+                                "Label": "arrived",
+                                "Sequence": "0",
+                                "Field": {
+                                    "Type": "label",
+                                    "Align": "row",
+                                    "JSONObject": "extensionData",
+                                    "JSONField": "Extended.CustomDescription",
+                                    "KeyStyle": {
+                                        "font-weight": "bold"
+                                    },
+                                    "ValueStyle": {
+                                        "font-weight": "normal",
+                                        "color": "red",
+                                        "font-style": "italic",
+                                        "font-size": "1.4rem!important"
+                                    },
+                                    "StaticLabel": true,
+                                    "ConditionQuery": "extensionData.Extended.CustomStatusToShow=='Arrived'"
+                                }
+                            }
+                        },
+                        {
+                            "ExtensionType": "field",
+                            "ExtensionProperties": {
+                                "Label": "AssociateId:",
+                                "Sequence": "2",
+                                "Field": {
+                                    "Type": "label",
+                                    "Align": "column",
+                                    "JSONObject": "extensionData",
+                                    "JSONField": "Extended.AcknowledgeAssociateId",
+                                    "KeyStyle": {
+                                        "font-weight": "bold"
+                                    },
+                                    "ValueStyle": {
+                                        "font-weight": "normal"
+                                    },
+                                    "ConditionQuery": "extensionData.Extended.AcknowledgeAssociateId!=null&&extensionData.Extended.IsAcknowledged!=false"
+                                }
+                            }
+                        }
+                    ]
+                },
+                {
+                    "ExtensionId": "sif.curbside.order.status",
+                    "ExtensionDetail": [
+                        {
+                            "ExtensionType": "field",
+                            "ExtensionProperties": {
+                                "Label": "Ack'd",
+                                "Sequence": "1",
+                                "Field": {
+                                    "Type": "label",
+                                    "Align": "row",
+                                    "JSONObject": "extensionData",
+                                    "JSONField": "Extended.IsAcknowledged",
+                                    "KeyStyle": {
+                                        "font-weight": "normal",
+                                        "padding": "6px 5px 2px 25px",
+                                        "border": "1px solid green",
+                                        "color": "white",
+                                        "font-size": "1.3rem!important"
+                                    },
+                                    "ValueStyle": {
+                                        "display": "none"
+                                    },
+                                    "ConditionQuery": "extensionData.Extended.IsAcknowledged!=false"
+                                }
+                            }
+                        },
+                        {
+                            "ExtensionType": "field",
+                            "ExtensionProperties": {
+                                "Label": "x",
+                                "Sequence": "1",
+                                "Field": {
+                                    "Type": "label",
+                                    "Align": "row",
+                                    "JSONObject": "extensionData",
+                                    "JSONField": "Extended.IsAcknowledged",
+                                    "KeyStyle": {
+                                        "position": "absolute",
+                                        "content": "none",
+                                        "margin-top": "-40px",
+                                        "color": "green",
+                                        "margin-left": "6px",
+                                        "border-radius": "24px",
+                                        "width": "1.5rem",
+                                        "height": "1.5rem",
+                                        "background-color": "green"
+                                    },
+                                    "ValueStyle": {
+                                        "font-weight": "normal",
+                                        "display": "none"
+                                    },
+                                    "ConditionQuery": "extensionData.Extended.IsAcknowledged!=false"
+                                }
+                            }
+                        }
+                    ]
+                },
+                {
+                    "ExtensionId": "sif-curbside-screen-order-status",
+                    "ExtensionDetail": [
+                        {
+                            "ExtensionType": "base-component",
+                            "ExtensionProperties": {
+                                "Label": "hide",
+                                "IsHidden": true,
+                                "Base-Component": {
+                                    "ConditionQuery": "extensionData.Extended.IsAcknowledged=true"
+                                }
+                            }
+                        }
+                    ]
+                },
+                {
+                    "ExtensionId": "sif.curbside-list.arrived-at",
+                    "ExtensionDetail": [
+                        {
+                            "ExtensionType": "base-component",
+                            "ExtensionProperties": {
+                                "Label": "Hide Arrived At",
+                                "IsHidden": true
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "ScreenId": "work-pickup-fulfillment-list",
+            "Extensions": [
+                {
+                    "ExtensionId": "sif.pickup.fulfillment.list",
+                    "ExtensionDetail": [
+                        {
+                            "ExtensionType": "field",
+                            "ExtensionProperties": {
+                                "Label": "",
+                                "Sequence": "-1",
+                                "Field": {
+                                    "Type": "label",
+                                    "Align": "column",
+                                    "JSONObject": "extensionData",
+                                    "JSONField": "Extended.CustomDescription",
+                                    "ConditionQuery": "extensionData.Extended.CustomStatusToShow=='Arrived'",
+                                    "KeyStyle": {
+                                        "display": "none"
+                                    },
+                                    "ValueStyle": {
+                                        "font-weight": "normal",
+                                        "color": "red",
+                                        "font-style": "italic",
+                                        "font-size": "1.4rem!important"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "ExtensionType": "field",
+                            "ExtensionProperties": {
+                                "Label": "",
+                                "Sequence": "-1",
+                                "Field": {
+                                    "Type": "label",
+                                    "Align": "column",
+                                    "JSONObject": "extensionData",
+                                    "JSONField": "Extended.CustomDescription",
+                                    "ConditionQuery": "extensionData.Extended.CustomStatusToShow=='Acknowledged'",
+                                    "KeyStyle": {
+                                        "display": "none"
+                                    },
+                                    "ValueStyle": {
+                                        "font-weight": "normal",
+                                        "color": "green",
+                                        "font-style": "italic",
+                                        "font-size": "1.4rem!important"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "ExtensionType": "field",
+                            "ExtensionProperties": {
+                                "Label": "AssociateId:",
+                                "Sequence": "2",
+                                "Field": {
+                                    "Type": "label",
+                                    "Align": "column",
+                                    "JSONObject": "extensionData",
+                                    "JSONField": "Extended.AcknowledgeAssociateId",
+                                    "KeyStyle": {
+                                        "font-weight": "bold"
+                                    },
+                                    "ValueStyle": {
+                                        "font-weight": "normal"
+                                    },
+                                    "ConditionQuery": "extensionData.Extended.AcknowledgeAssociateId!=null&&extensionData.Extended.IsAcknowledged!=false"
+                                }
+                            }
+                        },
+                        {
+                            "ExtensionType": "field",
+                            "ExtensionProperties": {
+                                "Label": "SDDDelivery:RetryRequired",
+                                "Sequence": "1",
+                                "Field": {
+                                    "Type": "label",
+                                    "Align": "column",
+                                    "JSONObject": "extensionData",
+                                    "JSONField": "Extended.SddRetryDeliveryRequired",
+                                    "KeyStyle": {
+                                        "font-weight": "bold",
+                                        "color": "red"
+                                    },
+                                    "ValueStyle": {
+                                        "font-weight": "bold",
+                                        "color": "red",
+                                        "visibility": "hidden"
+                                    },
+                                    "ConditionQuery": "extensionData.Extended.SddRetryDeliveryRequired==true&&extensionData.Extended.CreateDeliveryError==null"
+                                }
+                            }
+                        },
+                        {
+                            "ExtensionType": "field",
+                            "ExtensionProperties": {
+                                "Label": "SDDDelivery:",
+                                "Sequence": "1",
+                                "Field": {
+                                    "Type": "label",
+                                    "Align": "column",
+                                    "JSONObject": "extensionData",
+                                    "JSONField": "Extended.CreateDeliveryError",
+                                    "KeyStyle": {
+                                        "font-weight": "bold",
+                                        "color": "red"
+                                    },
+                                    "ValueStyle": {
+                                        "font-weight": "bold",
+                                        "color": "red"
+                                    },
+                                    "ConditionQuery": "extensionData.Extended.SddRetryDeliveryRequired==true&&extensionData.Extended.CreateDeliveryError!=null"
+                                }
+                            }
+                        }
+                    ]
+                },
+                {
+                    "ExtensionId": "sif.custom.fulfillment.statusindicator",
+                    "ExtensionDetail": [
+                        {
+                            "ExtensionType": "field",
+                            "ExtensionProperties": {
+                                "Label": "Ack'd",
+                                "Sequence": "1",
+                                "Field": {
+                                    "Type": "label",
+                                    "Align": "row",
+                                    "ConditionQuery": "extensionData.showCustomStatus!=null",
+                                    "JSONObject": "extensionData",
+                                    "JSONField": "Extended.CustomStatusToShow",
+                                    "KeyStyle": {
+                                        "border": "1px solid #5BD071",
+                                        "padding-left": "25px",
+                                        "padding-top": "8px",
+                                        "padding-bottom": "6px",
+                                        "padding-right": "6px",
+                                        "color": "white"
+                                    },
+                                    "ValueStyle": {
+                                        "background": "linear-gradient(-180deg, #5BD071 0%, #1AAF5D 100%)",
+                                        "font-weight": "normal",
+                                        "float": "right",
+                                        "color": "transparent",
+                                        "width": "10px",
+                                        "height": "10px",
+                                        "position": "absolute",
+                                        "margin-top": "-22px",
+                                        "border-radius": "50%",
+                                        "margin-left": "9px"
+                                    }
+                                }
+                            }
+                        }
+                    ]
+                },
+                {
+                    "ExtensionId": "sif.pickup-list.arrived-at",
+                    "ExtensionDetail": [
+                        {
+                            "ExtensionType": "base-component",
+                            "ExtensionProperties": {
+                                "Label": "Hide Arrived At",
+                                "IsHidden": true
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "messageKey": null,
+    "message": null,
+    "errors": [],
+    "exceptions": [],
+    "messages": {
+        "Message": [],
+        "Size": 0
+    },
+    "rootCause": null,
+    "cloudComponent": "com-manh-cp-organization:docker,side:8080",
+    "cloudComponentHostName": "741b8f5a09ca",
+    "requestUri": null,
+    "statusCode": "OK"
+}
