@@ -9,3 +9,14 @@ export class IpDataModel {
   ip: string = '';
   data: string = '';
 }
+
+export class BooksModel {
+  author: string = ""
+  description: string = ""
+  genre: string = ""
+  image: string = ""
+  isbn: string = ""
+  published: string = ""
+  publisher: string = ""
+  title: string = ""
+}

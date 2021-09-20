@@ -12,8 +12,8 @@ import { IpDataModel } from '../models/random.model';
 export class GotHouseService {
   constructor(private http: HttpClient) { }
 
-  getGotHouses(): Observable<Array<HouseModel>> {
-    return this.http.get<HouseModel[]>(Constants.HOUSES);
+  getGotHouses(): Observable<any> {
+    return this.http.get<any>(Constants.URI_BOOKS);
   }
 
   generateRandomYesOrNo() {

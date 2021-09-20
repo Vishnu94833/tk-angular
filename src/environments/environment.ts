@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  baseUrl: 'https://game-of-thrones-quotes.herokuapp.com/v1',
+  baseUrl: '',
 };
 
 /*
