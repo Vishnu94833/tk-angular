@@ -1,22 +1,22 @@
-import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { CommonModule, DatePipe } from '@angular/common';
+import { HttpClientModule } from '@angular/common/http';
 import {
-  CUSTOM_ELEMENTS_SCHEMA,
-  InjectionToken,
-  NgModule,
+  CUSTOM_ELEMENTS_SCHEMA, NgModule
 } from '@angular/core';
-// import { FlexLayoutModule } from '@angular/flex-layout';
+import { FlexLayoutModule } from '@angular/flex-layout';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgxDatatableModule } from '@swimlane/ngx-datatable';
+import { NgxJsonViewerModule } from 'ngx-json-viewer';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import GotHousesModule from './components';
-import { ListComponent } from './components/fraud-transaction-detail/list/list.component';
 import { MaterialModule } from './material.module';
 
 @NgModule({
-  declarations: [AppComponent, ListComponent],
+  declarations: [
+    AppComponent,
+  ],
   imports: [
     HttpClientModule,
     BrowserModule,
@@ -25,11 +25,13 @@ import { MaterialModule } from './material.module';
     MaterialModule,
     FormsModule,
     ReactiveFormsModule,
-    GotHousesModule,
     NgxDatatableModule,
+    CommonModule,
+    FlexLayoutModule,
+    NgxJsonViewerModule,
   ],
-  providers: [],
+  providers: [DatePipe],
   bootstrap: [AppComponent],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
-export class AppModule {}
+export class AppModule { }
