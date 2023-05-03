@@ -1,0 +1,17 @@
+$dark:(
+    backgroundColor: #222,
+    textColor: #ddd,
+    primaryButtonTextColor: #aaa,
+    primaryButtonTextTransform: uppercase,
+    primaryButtonTextHoverColor: #ddd,
+    primaryButtonColor: #333,
+    primaryButtonBorder: 1px solid #333,
+    button:(
+      secondary:(
+        backGround:black
+      ),
+      primary:(
+        backGround:grey
+      )
+    )
+  );

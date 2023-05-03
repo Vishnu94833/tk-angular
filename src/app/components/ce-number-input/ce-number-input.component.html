@@ -1,0 +1,18 @@
+<div class="numberInputDiv" fxLayout="row">
+    <button (click)="decrement(quantity)">-</button>
+    <!-- <input data-component-id="NumberInput" [disabled]="isTextFieldDisable()" id="inputTextField" class="numberType" #numberValue type="text" (keypress)="onlyNumberKey($event)" placeholder='{{placeholder}}'[(ngModel)]="quantity" (ngModelChange)="updateQuantity(quantity)" value="{{quantity}}"> -->
+    <div fxLayout="row" fxFlex fxLayoutAlign="space-around center">
+        <!-- <div contenteditable="true" class="numberType" #numberValue  fxLayoutAlign="space-around center">
+            {{quantity}}</div> -->
+            <input data-component-id="NumberInput" placeholder='{{placeholder}}'[(ngModel)]="quantity" value="{{quantity}}">
+        <div  fxLayoutAlign="space-around center">/</div>
+        <div  fxLayoutAlign="space-around center">88</div>
+    </div>
+
+    <button (click)="increment(quantity)">+</button>
+</div>
+<!-- <div *ngIf="enableOrderlineCancelPostReleasedFF" class="numberInputDiv" fxFelx flexLayout="row">
+    <button [disabled]="disableDecrementButton" id="decrementButton" class="decrementButton" data-component-id="DecrementQuantity" (click)="decrement(numberValue.value)" [title]="decreaseButtonTooltip"><manh-icon class="manh-icon-sm" >hypen</manh-icon></button>        
+    <input data-component-id="NumberInput" [disabled]="disableTextField" id="inputTextField" class="numberType" #numberValue type="text" (keypress)="onlyNumberKey($event)" [title]="disableTextField ? isIncrementDisabledTooltip : ''" placeholder='{{placeholder}}'[(ngModel)]="quantity" (ngModelChange)="updateQuantity(quantity)" value="{{quantity}}">
+    <button [disabled]="disableIncrementButton" id="incrementButton" class="incrementButton" data-component-id="IncrementQuantity" (click)="increment(numberValue.value)"  [title]=" disableIncrementButton ? isIncrementDisabledTooltip : ''"><manh-icon class="manh-icon-sm">add</manh-icon></button>    
+</div> -->

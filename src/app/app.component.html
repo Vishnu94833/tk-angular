@@ -1,2 +1,4 @@
-<router-outlet></router-outlet>
-  
+<ce-number-input data-component-id="EditQuantity" [title]="'updateQuantityTooltip'"
+[isIncrementDisabled]="false" [isDecrementDisabled]="false"
+(updateQuantityValue)="updateQuantity($event)" [quantity]="'1'"></ce-number-input>
+<!-- <router-outlet></router-outlet> -->

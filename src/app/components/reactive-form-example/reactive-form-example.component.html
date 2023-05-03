@@ -1,0 +1,74 @@
+<form [formGroup]="flightForm" (ngSubmit)="onSubmit(flightForm)">
+
+    <div fxLayout="column" fxLayoutGap="2rem" class="flight-form-container">
+
+        <div fxLayout="row" fxLayoutAlign="center center" fxLayoutGap="1rem">
+            <div fxFlex="50">
+                <label for="flight">Flight:</label>
+                <input type="radio" formControlName="flightType" value="roundtrip" /> Round trip
+                <input type="radio" formControlName="flightType" value="oneway" /> One way
+            </div>
+
+            <mat-form-field fxFlex="50">
+                <label for="passengers">Passengers:</label>
+                <mat-select name="passengers" id="" formControlName="passengers">
+                    <mat-option *ngFor="let i of passengerOptions" [value]="i">{{i}}</mat-option>
+                </mat-select>
+            </mat-form-field>
+        </div>
+
+        <div fxLayout="row" fxLayoutAlign="center center" fxLayoutGap="1rem">
+            <mat-form-field fxFlex="50">
+                <label for="from">From:</label>
+                <mat-select name="from" id="" formControlName="from">
+                    <mat-option *ngFor="let airport of airports" [value]="airport.code">{{airport.name}}</mat-option>
+                </mat-select>
+            </mat-form-field>
+
+            <mat-form-field fxFlex="50">
+                <label for="to">To:</label>
+                <mat-select name="to" id="" formControlName="to">
+                    <mat-option *ngFor="let airport of airports" [value]="airport.code">{{airport.name}}</mat-option>
+                </mat-select>
+            </mat-form-field>
+        </div>
+
+
+        <div fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="1rem">
+            <mat-form-field fxFlex="50">
+                <label for="depart">Depart:</label>
+                <input matInput type="date" formControlName="depart" />
+            </mat-form-field>
+
+
+            <mat-form-field *ngIf="flightForm.get('flightType')?.value === 'roundtrip'" fxFlex="50">
+                <label for="return">Return:</label>
+                <input matInput type="date" formControlName="return" />
+            </mat-form-field>
+        </div>
+
+        <div fxLayout="row" fxLayoutGap="1rem">
+            <div fxLayout="column"fxFlex="80">
+            </div>
+            <div fxFlex="20">
+                <!-- <mat-icon (click)="addNewCar()" fontIcon="home"></mat-icon> -->
+                <button mat-mini-fab color="primary" (click)="addNewCar()">+</button>
+            </div>
+
+           
+        </div>
+
+        <div fxLayout="column"fxFlex="80">
+            <div *ngFor="let car of cars; let i = index;">
+                <app-subform1 [form]="flightForm" [car]="car" [carIndex]="i"></app-subform1>
+            </div>
+        </div>
+
+
+
+        <button mat-raised-button color="primary" type="submit" [disabled]="!flightForm.valid">Submit</button>
+
+    </div>
+
+
+</form>

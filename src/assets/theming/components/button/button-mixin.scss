@@ -1,0 +1,15 @@
+@mixin button($type) {
+    @include themify($themes) {
+        border: themed('#{$type}ButtonBorder');
+        color: themed('#{$type}ButtonTextColor');
+        border-color: themed('#{$type}ButtonTextColor');
+        background-color: themed('#{$type}ButtonColor');
+        text-transform: themed('#{$type}ButtonTextTransform');
+
+        &:hover {
+            color: themed('#{$type}ButtonTextHoverColor');
+            border-color: themed('#{$type}ButtonTextHoverColor');
+            background-color: themed('#{$type}ButtonHoverColor');
+        }
+    }
+}

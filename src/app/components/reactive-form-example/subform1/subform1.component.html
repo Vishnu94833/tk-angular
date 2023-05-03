@@ -1,0 +1,15 @@
+<div [formGroup]="form">
+    <div class="car-wrap" formArrayName="cars">
+        <p class="title">This car is a {{car.make}}</p>
+        <div [ngClass]="car.make + '-car'" [formGroupName]="carIndex" fxLayout="row" fxLayoutGap="1rem">
+            <div formGroupName="details" fxLayout="row" fxLayoutGap="1rem">
+              <input type="text" formControlName="make" [(ngModel)]="car.make">
+              <input type="text" *ngIf="car.make != 'ford'" formControlName="model">
+              <input type="number" formControlName="year">
+            </div>          
+            <div formGroupName="appearance">
+              <input type="text" formControlName="color">
+            </div>
+        </div>
+    </div>
+</div>

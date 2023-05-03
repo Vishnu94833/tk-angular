@@ -1,0 +1,29 @@
+<form [formGroup]="myForm" (ngSubmit)="onSubmit()">
+    <mat-form-field *ngFor="let control of jsonFormData?.controls">
+        <mat-label>{{ control.label }}</mat-label>
+        <input matInput *ngIf="
+          [
+            'text',
+            'password',
+            'email',
+            'number',
+            'search',
+            'tel',
+            'url'
+          ].includes(control.type)
+        " [type]="control.type" [formControlName]="control.name" [value]="control.value" />
+        <textarea matInput *ngIf="control.type === 'textarea'" [formControlName]="control.name"
+            [value]="control.value"></textarea>
+        <mat-checkbox *ngIf="control.type === 'checkbox'" [formControlName]="control.name"></mat-checkbox>
+
+        <mat-slide-toggle *ngIf="control.type === 'toggle'" [formControlName]="control.name">
+            <span>{{control.label}}</span>
+        </mat-slide-toggle>
+
+        <mat-slider *ngIf="control.type === 'range'" [min]="control?.options?.min" [max]="control?.options?.max"
+            [formControlName]="control.name">
+        </mat-slider>
+    </mat-form-field>
+
+    <button mat-raised-button type="submit">Submit</button>
+</form>
