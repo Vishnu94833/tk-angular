@@ -5,8 +5,6 @@ import { State } from "./core.state";
 import * as PostsReducer from "./posts/posts.reducer";
 
 export const reducers: ActionReducerMap<State> = {
-  // menus: MenusReducer.reducer,
-  // user: UserReducer.reducer,
   posts: PostsReducer.reducer
 };
 

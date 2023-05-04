@@ -1,5 +1,5 @@
 import { createAction, props } from '@ngrx/store';
-import { Post } from '../../common/model/post.model';
+import { Post } from 'src/app/jsonplaceholder/common/model/post.model';
 
 export const postApiLoaded = createAction('[Posts] Api Loaded');
 

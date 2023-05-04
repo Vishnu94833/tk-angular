@@ -1,19 +1,15 @@
-import { Location } from "@angular/common";
 import { Injectable } from "@angular/core";
-import { Router } from "@angular/router";
 import { Actions, createEffect, ofType } from "@ngrx/effects";
 import { of } from "rxjs";
-import { switchMap, map, catchError, tap } from "rxjs/operators";
+import { catchError, map, switchMap } from "rxjs/operators";
+import { PostsService } from "src/app/jsonplaceholder/components/posts/services/posts.service";
 import * as PostsActions from "./posts.actions";
-import { PostsService } from "../../services/posts.service";
 
 @Injectable()
 export class PostsEffects {
   constructor(
-    private router: Router,
     private actions$: Actions<any>,
     private apiService: PostsService,
-    private location: Location
   ) {}
 
   fetchMenus$ = createEffect(() =>
@@ -21,7 +17,6 @@ export class PostsEffects {
       ofType(PostsActions.postApiLoaded.type),
       switchMap(() =>
       {
-        debugger
         return this.apiService.getPosts().pipe(
           map((posts) =>
           PostsActions.fetchPostsSuccess({ posts: posts })

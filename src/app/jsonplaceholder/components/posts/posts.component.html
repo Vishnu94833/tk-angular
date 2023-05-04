@@ -1,7 +1,12 @@
 <!-- <div fxFlex fxLayout="row"> -->
-    <div gdAreas=". . . ." gdGap="1rem">
+    <div gdAreas=". . ." gdGap="1rem">
         <ng-template ngFor [ngForOf]="posts$ | async" let-post let-i="index">
-            <mat-card >{{post.body}}</mat-card>
+            <p-card header="Title">
+                <p class="m-0">
+                    {{post.body}}
+                </p>
+            </p-card>
         </ng-template>
     </div>
 <!-- </div> -->
+
