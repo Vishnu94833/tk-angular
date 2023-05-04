@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ApplyAllHeaderComponent } from './apply-all-header.component';
+import { RootComponent } from './root.component';
 
-describe('ApplyAllHeaderComponent', () => {
-  let component: ApplyAllHeaderComponent;
-  let fixture: ComponentFixture<ApplyAllHeaderComponent>;
+describe('RootComponent', () => {
+  let component: RootComponent;
+  let fixture: ComponentFixture<RootComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ApplyAllHeaderComponent ]
+      declarations: [ RootComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(ApplyAllHeaderComponent);
+    fixture = TestBed.createComponent(RootComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

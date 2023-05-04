@@ -21,6 +21,13 @@ const routes: Routes = [
     import('./components/dynamic-reactive-form/dynamic-reactive-form.module').then(
       (m) => m.DynamicReactiveFormModule
     ),
+  },
+  {
+    path: 'json-api',
+    loadChildren: () =>
+    import('./jsonplaceholder/jsonplaceholder.module').then(
+      (m) => m.JsonplaceholderModule
+    ),
   }
 ];
 

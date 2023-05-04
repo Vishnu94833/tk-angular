@@ -1,8 +1,6 @@
 import { CommonModule, DatePipe } from '@angular/common';
-import { HttpClientModule } from '@angular/common/http';
-import {
-  CUSTOM_ELEMENTS_SCHEMA, NgModule
-} from '@angular/core';
+import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
+import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
@@ -15,16 +13,10 @@ import { Subform1Component } from './components/reactive-form-example/subform1/s
 import { UniversityImpl } from './design-patterns/abstract-example/university-impl';
 import { UniversityInterface } from './design-patterns/abstract-example/university.interface';
 import { MaterialModule } from './material.module';
-import { CENumberInput } from './components/ce-number-input/ce-number-input.component';
+import { JsonPlaceHolderInterceptor } from './jsonplaceholder/services/jsonplaceholder-http.interceptor';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    CENumberInput,
-    Subform1Component,
-    ReactiveFormExampleComponent
-
-  ],
+  declarations: [AppComponent, Subform1Component, ReactiveFormExampleComponent],
   imports: [
     HttpClientModule,
     BrowserModule,
@@ -36,12 +28,17 @@ import { CENumberInput } from './components/ce-number-input/ce-number-input.comp
     CommonModule,
     FlexLayoutModule,
     AppRoutingModule,
-
   ],
-  providers: [DatePipe,
-  {provide:UniversityInterface
-    ,useClass:UniversityImpl}],
+  providers: [
+    DatePipe,
+    { provide: UniversityInterface, useClass: UniversityImpl },
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: JsonPlaceHolderInterceptor,
+      multi: true
+    }
+  ],
   bootstrap: [AppComponent],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
-export class AppModule { }
+export class AppModule {}
