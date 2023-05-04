@@ -3,12 +3,14 @@ import { CommonModule } from '@angular/common';
 
 import { CommentsRoutingModule } from './comments-routing.module';
 import { CommentsComponent } from './comments.component';
+import { MaterialModule } from 'src/app/material.module';
 
 
 @NgModule({
   declarations: [CommentsComponent],
   imports: [
     CommonModule,
+    MaterialModule,
     CommentsRoutingModule
   ]
 })
