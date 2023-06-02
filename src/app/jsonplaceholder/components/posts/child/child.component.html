@@ -1,0 +1,29 @@
+<div fxLayout="column" fxLayout="column" fxLayoutAlign="space-between stretch" fxFill style="height: 500px;">
+    <ngx-datatable [rows]="dataValue" class="material striped cs-datatable" style="overflow: hidden;"
+        [columnMode]="'force'" [headerHeight]="48" [rowHeight]="45" [footerHeight]="0" [scrollbarH]="true"
+        [externalSorting]="true">
+        <ngx-datatable-column [canAutoResize]="false" [draggable]="false" [resizeable]="false" [width]="100"
+             [frozenLeft]="true" prop="label">
+            <ng-template let-value="value" ngx-datatable-cell-template>
+                <span> {{value}} </span>
+            </ng-template>
+        </ngx-datatable-column>
+
+        <!-- <span *ngFor="let gridData of gridDataFields"> -->
+
+
+        <ngx-datatable-column [draggable]="true" [name]="'vishnu'" prop="vishnu">
+            <ng-template let-value="value" ngx-datatable-cell-template>
+                <span> {{value}} </span>
+            </ng-template>
+        </ngx-datatable-column>
+
+        <ngx-datatable-column [draggable]="true" [name]="'Some Girl'" prop="test">
+            <ng-template let-value="value" ngx-datatable-cell-template>
+                <span> {{value}} </span>
+            </ng-template>
+        </ngx-datatable-column>
+
+        <!-- </span> -->
+    </ngx-datatable>
+</div>

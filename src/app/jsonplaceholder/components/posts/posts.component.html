@@ -1,12 +1,47 @@
-<!-- <div fxFlex fxLayout="row"> -->
-    <div gdAreas=". . ." gdGap="1rem">
-        <ng-template ngFor [ngForOf]="posts$ | async" let-post let-i="index">
-            <!-- <p-card header="Title"> -->
-                <p class="m-0">
-                    {{post.body}}
-                </p>
-            <!-- </p-card> -->
-        </ng-template>
-    </div>
-<!-- </div> -->
+<!-- <ng-container *ngIf="posts$ | async as posts">
+    <p-dataView #dv [value]="posts" [paginator]="true" [rows]="9" filterBy="name" layout="grid" >
+        <ng-template pTemplate="header">
+            <div class="p-d-flex p-flex-column p-flex-md-row p-jc-md-between">
 
+                <p-dataViewLayoutOptions></p-dataViewLayoutOptions>
+            </div>
+        </ng-template>
+        <ng-template let-post pTemplate="listItem">
+            <div class="p-col-12 p-p-1">
+                <p-card>
+                    <div>
+                        <h5>{{post.id}}</h5>
+                        <h4>{{post.userId}}</h4>
+                        <h3>{{post.title}}</h3>
+                        <div>{{post.body}}</div>
+                    </div>
+                </p-card>
+            </div>
+        </ng-template>
+        <ng-template let-post pTemplate="gridItem" >
+
+            <div class="p-col-12 p-md-4 p-p-2">
+                <p-card>
+                    <div>
+                        <h5>{{post.id}}</h5>
+                        <h4>{{post.id}}</h4>
+                        <h3>{{post.title}}</h3>
+                        <div>{{post.body}}</div>
+                    </div>
+                </p-card>
+            </div>
+        </ng-template>
+    </p-dataView>
+</ng-container> -->
+
+
+<app-child [childTemplate]="childTemplate"></app-child>
+
+
+<ng-template #childTemplate let-item>
+
+
+
+</ng-template>
+
+<!-- <app-child [childTemplate]="childTemplate"></app-child> -->

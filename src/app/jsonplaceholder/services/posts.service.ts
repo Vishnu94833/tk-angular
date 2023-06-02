@@ -1,8 +1,8 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { UrlConstants } from '../../../common/constants/url-constants';
+import { UrlConstants } from '../common/constants/url-constants';
 import { Observable } from 'rxjs';
-import { Post } from '../../../common/model/post.model';
+import { Post } from '../common/model/post.model';
 
 @Injectable({
   providedIn: 'root',
@@ -12,5 +12,9 @@ export class PostsService {
 
   getPosts(): Observable<Post[]> {
     return this.http.get<any>(UrlConstants.POSTS);
+  }
+
+  getPostsById(id:string): Observable<Post[]> {
+    return this.http.get<any>(`${UrlConstants.POSTS}/${id}`);
   }
 }

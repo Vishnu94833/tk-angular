@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Store } from '@ngrx/store';
-import { postApiLoaded, selectPostsItems } from './state/posts';
+import { postApiLoaded, selectPostsItems } from '../../state/posts';
 @Component({
   selector: 'app-posts',
   templateUrl: './posts.component.html',

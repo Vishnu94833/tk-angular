@@ -2,28 +2,38 @@ import { CommonModule } from '@angular/common';
 import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
 
 import { FlexLayoutModule } from '@angular/flex-layout';
-import { EffectsModule } from '@ngrx/effects';
-import { StoreModule } from '@ngrx/store';
-import { StoreDevtoolsModule } from '@ngrx/store-devtools';
-import { environment } from 'src/environments/environment.prod';
 import { PostsRoutingModule } from './posts-routing.module';
 import { PostsComponent } from './posts.component';
-import { metaReducers, reducers } from './state';
-import { PostsEffects } from './state/posts';
+import { CreatePostComponent } from './create-post/create-post.component';
+import { EditPostComponent } from './edit-post/edit-post.component';
+import { PostsListComponent } from './posts-list/posts-list.component';
+import { CardModule } from 'primeng/card';
+import {DataViewModule} from 'primeng/dataview';
+import {ButtonModule} from 'primeng/button';
+import {PanelModule} from 'primeng/panel';
+import {DropdownModule} from 'primeng/dropdown';
+import {DialogModule} from 'primeng/dialog';
+import {InputTextModule} from 'primeng/inputtext';
+import {RatingModule} from 'primeng/rating';
+import {RippleModule} from 'primeng/ripple';
+import { ChildComponent } from './child/child.component';
+import { NgxDatatableModule } from '@swimlane/ngx-datatable';
 
 @NgModule({
-  declarations: [PostsComponent],
+  declarations: [PostsComponent, CreatePostComponent, EditPostComponent, PostsListComponent, ChildComponent],
   imports: [
+    CardModule,
+    NgxDatatableModule,
+    DataViewModule,
+    PanelModule,
+    DialogModule,
+    DropdownModule,
+    InputTextModule,
+    ButtonModule,
+    RippleModule,
+    RatingModule,
     CommonModule,
     FlexLayoutModule,
-    StoreModule.forRoot(reducers, {
-      metaReducers,
-    }),
-    EffectsModule.forRoot([PostsEffects]),
-    StoreDevtoolsModule.instrument({
-      maxAge: 25,
-      logOnly: environment.production,
-    }),
     PostsRoutingModule,
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],

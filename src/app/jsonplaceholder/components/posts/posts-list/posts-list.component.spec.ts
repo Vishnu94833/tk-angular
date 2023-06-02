@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { Subform2Component } from './subform2.component';
+import { PostsListComponent } from './posts-list.component';
 
-fdescribe('Subform2Component', () => {
-  let component: Subform2Component;
-  let fixture: ComponentFixture<Subform2Component>;
+describe('PostsListComponent', () => {
+  let component: PostsListComponent;
+  let fixture: ComponentFixture<PostsListComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ Subform2Component ]
+      declarations: [ PostsListComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(Subform2Component);
+    fixture = TestBed.createComponent(PostsListComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

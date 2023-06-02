@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { Subform2Component } from './subform2.component';
+import { EditPostComponent } from './edit-post.component';
 
-fdescribe('Subform2Component', () => {
-  let component: Subform2Component;
-  let fixture: ComponentFixture<Subform2Component>;
+describe('EditPostComponent', () => {
+  let component: EditPostComponent;
+  let fixture: ComponentFixture<EditPostComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ Subform2Component ]
+      declarations: [ EditPostComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(Subform2Component);
+    fixture = TestBed.createComponent(EditPostComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

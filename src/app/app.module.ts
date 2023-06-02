@@ -13,11 +13,14 @@ import { UniversityImpl } from './design-patterns/abstract-example/university-im
 import { UniversityInterface } from './design-patterns/abstract-example/university.interface';
 import { JsonPlaceHolderInterceptor } from './jsonplaceholder/services/jsonplaceholder-http.interceptor';
 import { MaterialModule } from './material.module';
+import { GlobalService } from './service/global.service';
+import { NgxDatatableModule } from '@swimlane/ngx-datatable';
 
 @NgModule({
   declarations: [AppComponent, Subform1Component, ReactiveFormExampleComponent],
   imports: [
     HttpClientModule,
+    NgxDatatableModule,
     BrowserModule,
     BrowserAnimationsModule,
     MaterialModule,
@@ -28,6 +31,7 @@ import { MaterialModule } from './material.module';
     AppRoutingModule,
   ],
   providers: [
+    GlobalService,
     DatePipe,
     { provide: UniversityInterface, useClass: UniversityImpl },
     {

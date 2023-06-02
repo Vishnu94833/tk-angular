@@ -5,5 +5,12 @@ export interface PostsState {
 }
 
 export const initialState: PostsState = {
-  posts: [],
+  posts: [
+    {
+      userId: 4848,
+      id: 1,
+      title: "VK",
+      body: "Vishnu Kuppan"
+    }
+  ],
 };

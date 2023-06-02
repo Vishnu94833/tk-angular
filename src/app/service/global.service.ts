@@ -13,7 +13,7 @@ export interface Todo {
   completed: boolean;
 }
 
-@Injectable({ providedIn: 'root' })
+@Injectable()
 export class GlobalService {
   data: any = {
     FirstName: 'Vishnu',
