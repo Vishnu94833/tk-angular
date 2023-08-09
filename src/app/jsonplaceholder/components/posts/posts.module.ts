@@ -1,7 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
 
-import { FlexLayoutModule } from '@angular/flex-layout';
+// import { FlexLayoutModule } from '@angular/flex-layout';
 import { EffectsModule } from '@ngrx/effects';
 import { StoreModule } from '@ngrx/store';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
@@ -15,7 +15,7 @@ import { PostsEffects } from './state/posts';
   declarations: [PostsComponent],
   imports: [
     CommonModule,
-    FlexLayoutModule,
+    // FlexLayoutModule,
     StoreModule.forRoot(reducers, {
       metaReducers,
     }),

@@ -1,6 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
-import { FlexLayoutModule } from '@angular/flex-layout';
+// import { FlexLayoutModule } from '@angular/flex-layout';
 import { FormsModule } from '@angular/forms';
 import { MaterialModule } from 'src/app/material.module';
 
@@ -22,7 +22,7 @@ import { SingletonComponent } from './singleton/singleton.component';
   imports: [
     CommonModule,
     MaterialModule,
-    FlexLayoutModule,
+    // FlexLayoutModule,
     FormsModule,
     CreationalPatternRoutingModule,
   ],

@@ -1,6 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
-import { FlexLayoutModule } from '@angular/flex-layout';
+// import { FlexLayoutModule } from '@angular/flex-layout';
 import { MaterialModule } from 'src/app/material.module';
 import { StructuralPatternRoutingModule } from './structural-pattern-routing.module';
 
@@ -12,7 +12,7 @@ import { StructuralPatternRoutingModule } from './structural-pattern-routing.mod
   imports: [
     CommonModule,
     MaterialModule,
-    FlexLayoutModule,
+    // FlexLayoutModule,
     StructuralPatternRoutingModule
   ],
 })

@@ -1,7 +1,7 @@
 import { CommonModule, DatePipe } from '@angular/common';
 import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
-import { FlexLayoutModule } from '@angular/flex-layout';
+// import { FlexLayoutModule } from '@angular/flex-layout';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -24,7 +24,7 @@ import { MaterialModule } from './material.module';
     FormsModule,
     ReactiveFormsModule,
     CommonModule,
-    FlexLayoutModule,
+    // FlexLayoutModule,
     AppRoutingModule,
   ],
   providers: [

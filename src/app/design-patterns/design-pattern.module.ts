@@ -1,6 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
-import { FlexLayoutModule } from '@angular/flex-layout';
+// import { FlexLayoutModule } from '@angular/flex-layout';
 import { MaterialModule } from '../material.module';
 
 import { DesignPatternRoutingModule } from './design-pattern-routing.module';
@@ -11,7 +11,7 @@ import { DesignPatternComponent } from './design-pattern.component';
   imports: [
     CommonModule,
     MaterialModule,
-    FlexLayoutModule,
+    // FlexLayoutModule,
     DesignPatternRoutingModule,
   ],
 })
