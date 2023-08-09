@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormArray, FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
+import { UntypedFormArray, UntypedFormBuilder, UntypedFormControl, UntypedFormGroup, Validators } from '@angular/forms';
 
 export class Flight {
   FlightType: string = 'roundtrip';
@@ -16,7 +16,7 @@ export class Flight {
   styleUrls: ['./reactive-form-example.component.scss'],
 })
 export class ReactiveFormExampleComponent implements OnInit {
-  flightForm: FormGroup;
+  flightForm: UntypedFormGroup;
 
   airports: { code: string; name: string }[] = [
     { code: 'JFK', name: 'John F. Kennedy International Airport' },
@@ -32,7 +32,7 @@ export class ReactiveFormExampleComponent implements OnInit {
 
   cars:any = []
 
-  constructor(private fb: FormBuilder) {
+  constructor(private fb: UntypedFormBuilder) {
     this.flightForm = this.fb.group({
       flightType: [this.flightType, Validators.required],
       from: ['', Validators.required],
@@ -49,14 +49,14 @@ export class ReactiveFormExampleComponent implements OnInit {
   }
 
   setUpForm(cars: any[] ) {
-    this.flightForm.addControl('cars',new FormArray(cars.map((car) => this.createCar(car))))
+    this.flightForm.addControl('cars',new UntypedFormArray(cars.map((car) => this.createCar(car))))
     // return new FormGroup({
     //   cars: new FormArray(cars.map((car) => this.createCar(car)))
     // });
   }
 
   get carsFormArray() {
-    return (this.flightForm.get('cars') as FormArray);
+    return (this.flightForm.get('cars') as UntypedFormArray);
   }
 
   addNewCar() {
@@ -94,19 +94,19 @@ export class ReactiveFormExampleComponent implements OnInit {
   }
 
   createCar(car: any) {
-    return new FormGroup({
-      details: new FormGroup({
-        make: new FormControl(car.make, Validators.required),
-        model: new FormControl(car.model),
-        year: new FormControl(car.year, Validators.required)
+    return new UntypedFormGroup({
+      details: new UntypedFormGroup({
+        make: new UntypedFormControl(car.make, Validators.required),
+        model: new UntypedFormControl(car.model),
+        year: new UntypedFormControl(car.year, Validators.required)
       }),
-      appearance: new FormGroup({
-        color: new FormControl(car.color, Validators.required)
+      appearance: new UntypedFormGroup({
+        color: new UntypedFormControl(car.color, Validators.required)
       })
     })
   }
 
-  onSubmit(flightForm: FormGroup) {
+  onSubmit(flightForm: UntypedFormGroup) {
     let flight: Flight = <Flight>flightForm.value;
     console.log(flight);
   }

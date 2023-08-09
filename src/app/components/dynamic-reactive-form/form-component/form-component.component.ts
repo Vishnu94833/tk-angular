@@ -6,7 +6,7 @@ import {
   OnInit,
   SimpleChanges,
 } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { UntypedFormBuilder, UntypedFormGroup, Validators } from '@angular/forms';
 
 interface JsonFormValidators {
   min?: number;
@@ -50,9 +50,9 @@ export class FormComponentComponent implements OnChanges {
   // @ts-ignore
   @Input() jsonFormData: JsonFormData;
 
-  public myForm: FormGroup = this.fb.group({});
+  public myForm: UntypedFormGroup = this.fb.group({});
 
-  constructor(private fb: FormBuilder) {}
+  constructor(private fb: UntypedFormBuilder) {}
 
   ngOnChanges(changes: SimpleChanges) {
     if (!changes.jsonFormData.firstChange) {
