@@ -1,12 +1,10 @@
-<!-- <div fxFlex fxLayout="row"> -->
-    <div gdAreas=". . ." gdGap="1rem">
-        <ng-template ngFor [ngForOf]="posts$ | async" let-post let-i="index">
-            <!-- <p-card header="Title"> -->
-                <p class="m-0">
-                    {{post.body}}
-                </p>
-            <!-- </p-card> -->
-        </ng-template>
-    </div>
-<!-- </div> -->
+<div *ngIf="posts$ | async as data">
 
+    <ng-container *ngFor="let post of data">
+
+        <p class="m-0">
+            {{post.body }}
+        </p>
+
+    </ng-container>
+</div>

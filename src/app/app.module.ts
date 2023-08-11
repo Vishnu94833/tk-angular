@@ -13,6 +13,9 @@ import { UniversityImpl } from './design-patterns/abstract-example/university-im
 import { UniversityInterface } from './design-patterns/abstract-example/university.interface';
 import { JsonPlaceHolderInterceptor } from './jsonplaceholder/services/jsonplaceholder-http.interceptor';
 import { MaterialModule } from './material.module';
+import { StoreModule } from '@ngrx/store';
+import { EffectsModule } from '@ngrx/effects';
+import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 
 @NgModule({
   declarations: [AppComponent, Subform1Component, ReactiveFormExampleComponent],
@@ -24,6 +27,9 @@ import { MaterialModule } from './material.module';
     FormsModule,
     ReactiveFormsModule,
     CommonModule,
+    StoreModule.forRoot(),
+    EffectsModule.forRoot(),
+    StoreDevtoolsModule.instrument({}),
     // FlexLayoutModule,
     AppRoutingModule,
   ],
