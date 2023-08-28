@@ -1,6 +1,7 @@
-import { createAction, props } from '@ngrx/store';
+import { createAction, createActionGroup, emptyProps, props } from '@ngrx/store';
 import { Post } from 'src/app/jsonplaceholder/common/model/post.model';
 
+// ! OLD WAY
 export const postApiLoaded = createAction('[Posts] Api Loaded');
 
 export const fetchPostsSuccess = createAction(
@@ -13,46 +14,16 @@ export const fetchPostsFailed = createAction(
   props<{ error: any }>()
 );
 
-// export const addMenuItemFormSubmitted = createAction(
-//   "[Add Menu Page] Add Menu Item Form Submitted",
-//   props<{ menuItem: Post }>()
-// );
 
-// export const addMenuItemSuccess = createAction(
-//   "[Menu API] Add Menu Item Success"
-// );
+// * NEW WAY
+export const PostsActions = createActionGroup({
+  source: '[Posts API]',
+  events: {
+    'postApiLoaded': emptyProps(),
+   // defining an event without payload using the `emptyProps` function
+    'fetchPostsSuccess': props<{ posts: Post[] }>(),
 
-// export const addMenuItemFailed = createAction(
-//   "[Menu API] Add Menu Item Failed",
-//   props<{ error: any }>()
-// );
-
-// export const editMenuItemFormSubmitted = createAction(
-//   "[Edit Menu Page] Edit Menu Item Form Submitted",
-//   props<{ menuItem: Post }>()
-// );
-
-// export const editMenuItemSuccess = createAction(
-//   "[Menu API] Edit Menu Item Success",
-//   props<{ menuItem: Post }>()
-// );
-
-// export const editMenuItemFailed = createAction(
-//   "[Menu API] Edit Menu Item Failed",
-//   props<{ error: any }>()
-// );
-
-// export const deleteMenuItemInitiated = createAction(
-//   "[Delete Menu Page] Delete Menu Item Initiated",
-//   props<{ menuId: string }>()
-// );
-
-// export const deleteMenuItemSuccess = createAction(
-//   "[Menu API] Delete Menu Item Success",
-//   props<{ menuId: string }>()
-// );
-
-// export const deleteMenuItemFailed = createAction(
-//   "[Menu API] Delete Menu Item Failed",
-//   props<{ error: any }>()
-// );
+    // defining an event with payload using the `props` function
+    'fetchPostsFailed': props<{ error: any }>(),
+  },
+});

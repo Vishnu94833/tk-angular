@@ -28,6 +28,13 @@ const routes: Routes = [
     import('./jsonplaceholder/jsonplaceholder.module').then(
       (m) => m.JsonplaceholderModule
     ),
+  },
+  {
+    path: "form",
+    loadChildren: ()=>
+    import('./dynamic-forms/dynamic-forms.module').then(
+      (m)=> m.DynamicFormsModule
+    )
   }
 ];
 

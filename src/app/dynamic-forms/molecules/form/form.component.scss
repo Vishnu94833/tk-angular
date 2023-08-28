@@ -1,0 +1,151 @@
+/* Flex Container */
+.flex-container {
+    display: flex;
+}
+
+.flex-inline-container {
+    display: inline-flex;
+}
+
+/* Flex Direction */
+.flex-row {
+    flex-direction: row;
+}
+
+.flex-row-reverse {
+    flex-direction: row-reverse;
+}
+
+.flex-column {
+    flex-direction: column;
+}
+
+.flex-column-reverse {
+    flex-direction: column-reverse;
+}
+
+/* Justify Content */
+.justify-start {
+    justify-content: flex-start;
+}
+
+.justify-end {
+    justify-content: flex-end;
+}
+
+.justify-center {
+    justify-content: center;
+}
+
+.justify-between {
+    justify-content: space-between;
+}
+
+.justify-around {
+    justify-content: space-around;
+}
+
+.justify-evenly {
+    justify-content: space-evenly;
+}
+
+/* Align Items */
+.align-start {
+    align-items: flex-start;
+}
+
+.align-end {
+    align-items: flex-end;
+}
+
+.align-center {
+    align-items: center;
+}
+
+.align-baseline {
+    align-items: baseline;
+}
+
+.align-stretch {
+    align-items: stretch;
+}
+
+/* Align Content */
+.align-content-start {
+    align-content: flex-start;
+}
+
+.align-content-end {
+    align-content: flex-end;
+}
+
+.align-content-center {
+    align-content: center;
+}
+
+.align-content-between {
+    align-content: space-between;
+}
+
+.align-content-around {
+    align-content: space-around;
+}
+
+.align-content-stretch {
+    align-content: stretch;
+}
+
+.gap-1{
+    gap: 1rem;
+}
+
+/* Flex Items */
+.flex-item {
+    flex: 1;
+}
+
+.flex-item-2 {
+    flex: 2;
+}
+
+/* Flex Grow & Shrink */
+.flex-grow-1 {
+    flex-grow: 1;
+}
+
+.flex-shrink-1 {
+    flex-shrink: 1;
+}
+
+/* Flex Order */
+.order-1 {
+    order: 1;
+}
+
+.order-2 {
+    order: 2;
+}
+
+/* Responsive Breakpoints */
+@media (max-width: 767px) {
+    .flex-container-sm {
+        display: flex;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .flex-container-md {
+        display: flex;
+    }
+}
+
+@media (min-width: 992px) {
+    .flex-container-lg {
+        display: flex;
+    }
+}
+
+div.flex-container > *,
+div.flex-container > mat-form-field {
+   width: 100% !important;
+}

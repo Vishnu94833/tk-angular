@@ -3,7 +3,8 @@ import { Actions, createEffect, ofType } from "@ngrx/effects";
 import { of } from "rxjs";
 import { catchError, map, switchMap } from "rxjs/operators";
 import { PostsService } from "src/app/jsonplaceholder/components/posts/services/posts.service";
-import * as PostsActions from "./posts.actions";
+import { PostsActions } from "./posts.actions";
+// import * as PostsActions from "./posts.actions";
 
 @Injectable()
 export class PostsEffects {
@@ -14,7 +15,7 @@ export class PostsEffects {
 
   fetchMenus$ = createEffect(() =>
     this.actions$.pipe(
-      ofType(PostsActions.postApiLoaded.type),
+      ofType(PostsActions.postApiLoaded().type),
       switchMap(() =>
       {
         return this.apiService.getPosts().pipe(

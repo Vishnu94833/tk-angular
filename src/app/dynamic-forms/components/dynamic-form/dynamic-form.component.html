@@ -1,0 +1,13 @@
+<mat-tab-group>
+    <mat-tab label="Main">
+        <div style="padding: 1rem;">
+            <dynamic-form [segment]="'Main'" [formData]="dynamicForm"></dynamic-form>
+        </div>
+    </mat-tab>
+    <mat-tab label="Personel">
+        <dynamic-form [segment]="'Personel'" [formData]="dynamicForm"></dynamic-form>
+    </mat-tab>
+    <mat-tab label="Patient">
+        <dynamic-form [segment]="'Patient'" [formData]="dynamicForm"></dynamic-form>
+    </mat-tab>
+</mat-tab-group>

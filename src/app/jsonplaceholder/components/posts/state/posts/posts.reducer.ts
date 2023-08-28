@@ -1,10 +1,11 @@
 import { Action, createReducer, on } from "@ngrx/store";
-import * as MenusActions from "./posts.actions";
+// import * as MenusActions from "./posts.actions";
 import { PostsState, initialState,  } from "./posts.state";
+import { PostsActions } from "./posts.actions";
 
 const menusReducer = createReducer(
 	initialState,
-	on(MenusActions.fetchPostsSuccess, (state, { posts }) => {
+	on(PostsActions.fetchPostsSuccess, (state, { posts }) => {
     return ({
 		...state,
 		posts: posts,
