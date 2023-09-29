@@ -1,0 +1,5 @@
+<div>
+    <p id="post" *ngFor="let post of posts$ | async">{{post|json}}</p>
+
+    <button (click)="onButtonClick('test')">Add</button>
+</div>
