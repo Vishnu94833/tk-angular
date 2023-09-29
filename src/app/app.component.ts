@@ -14,7 +14,7 @@ export class AppComponent implements OnInit, AfterViewInit {
   title = signal("Angular 16")
 
   ngAfterViewInit() {
-    log.debug('ngAfterViewInit',process.env.API_KEY,);
+    // log.debug('ngAfterViewInit',process.env.API_KEY,);
     // let a =this.globalService.getJsonPlaceholder()
     // log.debug("getCollege --> ", a)
   }

@@ -5,7 +5,8 @@ import createEsbuildPlugin from "@badeball/cypress-cucumber-preprocessor/esbuild
 
 export default defineConfig({
   e2e: {
-    specPattern: ["**/*.js","**/*.feature"],
+    specPattern: ["./cypress/**/*.feature"],
+    excludeSpecPattern: ["./dist/**/*"],
     async setupNodeEvents(
       on: Cypress.PluginEvents,
       config: Cypress.PluginConfigOptions
@@ -19,13 +20,5 @@ export default defineConfig({
       );
       return config;
     },
-  },
-
-  // component: {
-  //   devServer: {
-  //     framework: "angular",
-  //     bundler: "webpack",
-  //   },
-  //   specPattern: "**/*.cy.ts",
-  // },
+  }
 });

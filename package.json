@@ -3,9 +3,10 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "setup":"node ./setup.js",
+    "setup": "node ./setup.js",
     "start": "ng serve",
-    "build": "ng build",
+    "build": "ng build --configuration production --stats-json",
+    "analyze": "webpack-bundle-analyzer dist/stats.json",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "e2e": "npx cypress open"
@@ -14,13 +15,10 @@
   "dependencies": {
     "@angular/animations": "^16.2.0",
     "@angular/cdk": "^16.2.0",
-    "@angular/common": "^16.2.0",
     "@angular/compiler": "^16.2.0",
-    "@angular/core": "^16.2.0",
     "@angular/forms": "^16.2.0",
     "@angular/material": "^16.2.0",
     "@angular/platform-browser": "^16.2.0",
-    "@angular/platform-browser-dynamic": "^16.2.0",
     "@angular/router": "^16.2.0",
     "@badeball/cypress-cucumber-preprocessor": "^15.1.5",
     "@ngrx/effects": "^16.2.0",
@@ -32,9 +30,12 @@
     "zone.js": "~0.13.1"
   },
   "devDependencies": {
-    "@angular-devkit/build-angular": "^16.2.0",
-    "@angular/cli": "^16.2.0",
+    "@angular-devkit/build-angular": "^16.2.4",
+    "@angular/cli": "^16.2.4",
+    "@angular/common": "^16.2.7",
     "@angular/compiler-cli": "^16.2.0",
+    "@angular/core": "^16.2.7",
+    "@angular/platform-browser-dynamic": "^16.2.7",
     "@bahmutov/cypress-esbuild-preprocessor": "^2.2.0",
     "@types/jasmine": "~3.8.0",
     "@types/node": "^12.11.1",
@@ -46,7 +47,8 @@
     "karma-coverage": "~2.0.3",
     "karma-jasmine": "~4.0.0",
     "karma-jasmine-html-reporter": "~1.7.0",
-    "typescript": "~4.9.5"
+    "typescript": "~4.9.5",
+    "webpack-bundle-analyzer": "^4.9.1"
   },
   "cypress-cucumber-preprocessor": {
     "nonGlobalStepDefinitions": true
