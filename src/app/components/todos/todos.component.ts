@@ -14,7 +14,7 @@ export class TodosComponent implements OnInit {
   constructor(private jsonPlaceholderService: JsonPlaceholderService) {}
 
   ngOnInit(): void {
-    this.todos$ = this.jsonPlaceholderService.getTodos();
+    this.todos$ = this.jsonPlaceholderService.getTodos(this.constructor.name);
   }
 
   onButtonClick(req: string) {

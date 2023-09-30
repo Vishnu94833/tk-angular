@@ -6,16 +6,13 @@ import {
   HttpInterceptor
 } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { environment } from 'src/environments/environment';
 
 @Injectable()
-export class CustomHttpInterceptor implements HttpInterceptor {
+export class TrackerInterceptor implements HttpInterceptor {
 
   constructor() {}
 
   intercept(request: HttpRequest<unknown>, next: HttpHandler): Observable<HttpEvent<unknown>> {
-    debugger
-    const customRequest = request.clone({ url: `${environment.baseUrl}/${request.url}` });
-    return next.handle(customRequest);
+    return next.handle(request);
   }
 }

@@ -16,7 +16,7 @@ export class PostsComponent implements OnInit {
   constructor(private jsonPlaceHolderService: JsonPlaceholderService, private router: Router) {}
 
   ngOnInit(): void {
-    this.posts$ = this.jsonPlaceHolderService.getPosts();
+    this.posts$ = this.jsonPlaceHolderService.getPosts(this.constructor.name);
   }
 
   onButtonClick(req: string) {
