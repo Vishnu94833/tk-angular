@@ -6,7 +6,7 @@
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test",
+    "test": "jest --coverage",
     "component-test": "npx cypress run --component --reporter json",
     "e2e": "npx cypress open"
   },
@@ -29,15 +29,11 @@
     "@angular/cli": "^14.2.12",
     "@angular/compiler-cli": "^14.3.0",
     "@cypress/code-coverage": "^3.12.1",
-    "@types/jasmine": "~3.8.0",
+    "@types/jest": "^29.5.5",
     "@types/node": "^12.11.1",
     "cypress": "^13.3.0",
-    "jasmine-core": "~3.8.0",
-    "karma": "~6.3.0",
-    "karma-chrome-launcher": "~3.1.0",
-    "karma-coverage": "~2.0.3",
-    "karma-jasmine": "~4.0.0",
-    "karma-jasmine-html-reporter": "~1.7.0",
+    "jest": "^29.7.0",
+    "jest-preset-angular": "^13.1.2",
     "typescript": "~4.6.4"
   }
 }
