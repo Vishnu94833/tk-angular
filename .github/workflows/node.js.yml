@@ -5,9 +5,9 @@ name: Node.js CI
 
 on:
   push:
-    branches: [ "angular-14" ]
+    branches: [ "*" ]
   pull_request:
-    branches: [ "angular-14" ]
+    branches: [ "*" ]
 
 jobs:
   build:
