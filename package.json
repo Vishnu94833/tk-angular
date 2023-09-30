@@ -7,7 +7,7 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "component-test": "npx cypress run --component",
+    "component-test": "npx cypress run --component --reporter json",
     "e2e": "npx cypress open"
   },
   "private": true,

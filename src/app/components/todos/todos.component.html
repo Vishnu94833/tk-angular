@@ -1,0 +1,6 @@
+<div>
+    <ng-container *ngFor="let todo of todos$ | async">
+        <app-todo [todo]="todo"></app-todo>
+    </ng-container>
+    <button (click)="onButtonClick('test')">Add</button>
+</div>

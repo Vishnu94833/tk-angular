@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Mocha Tests" time="0.341" tests="2" failures="0">
+  <testsuite name="Root Suite" timestamp="2023-09-29T13:33:02" tests="0" file="cypress/component-tests/posts/PostComponent.cy.ts" time="0.000" failures="0">
+  </testsuite>
+  <testsuite name="PostsComponent.cy.ts" timestamp="2023-09-29T13:33:02" tests="2" time="0.335" failures="0">
+    <testcase name="PostsComponent.cy.ts Should check PostsComponent" time="0.119" classname="Should check PostsComponent">
+    </testcase>
+    <testcase name="PostsComponent.cy.ts Should check posts length and button click" time="0.174" classname="Should check posts length and button click">
+    </testcase>
+  </testsuite>
+</testsuites>
