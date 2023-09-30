@@ -27,8 +27,8 @@ jobs:
         node-version: 16.x
         cache: 'npm'
         cache-dependency-path: 'package-lock.json'
-    - name: Install Angular CLI
-      run: npm install -g @angular/cli
+    - name: Npm Clean
+      run: npm cache clean -f
     - name: Install dependencies
       run: npm install
     - name: Test
