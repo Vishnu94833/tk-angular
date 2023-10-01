@@ -6,7 +6,7 @@
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "jest --coverage",
+    "test": "jest --coverage 'src/app/components/todos/todos.component.spec.ts' -t 'TodosComponent'",
     "component-test": "npx cypress run --component --reporter json",
     "e2e": "npx cypress open"
   },

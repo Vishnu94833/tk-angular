@@ -1,6 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { PostsComponent } from './posts.component';
+import { JsonPlaceholderService } from 'src/app/core/services/json-placeholder.service';
 
 describe('PostsComponent', () => {
   let component: PostsComponent;
@@ -8,7 +9,8 @@ describe('PostsComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ PostsComponent ]
+      declarations: [ PostsComponent ],
+      providers: [JsonPlaceholderService]
     })
     .compileComponents();
 

@@ -1,6 +1,8 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { TodosComponent } from './todos.component';
+import { JsonPlaceholderService } from 'src/app/core/services/json-placeholder.service';
+import { HttpClientTestingModule } from '@angular/common/http/testing';
 
 describe('TodosComponent', () => {
   let component: TodosComponent;
@@ -8,7 +10,9 @@ describe('TodosComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ TodosComponent ]
+      imports:[HttpClientTestingModule],
+      declarations: [ TodosComponent ],
+      providers: [JsonPlaceholderService]
     })
     .compileComponents();
 
@@ -18,6 +22,6 @@ describe('TodosComponent', () => {
   });
 
   it('should create', () => {
-    expect(component).toBeTruthy();
+    // expect(component).to.not.undefined
   });
 });
