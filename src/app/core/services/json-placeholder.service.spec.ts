@@ -2,7 +2,7 @@ import { TestBed } from '@angular/core/testing';
 
 import { JsonPlaceholderService } from './json-placeholder.service';
 
-xdescribe('JsonPlaceholderService', () => {
+describe('JsonPlaceholderService', () => {
   let service: JsonPlaceholderService;
 
   beforeEach(() => {
