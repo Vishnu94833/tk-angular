@@ -23,6 +23,6 @@ export class PostsComponent implements OnInit {
     this.valueFromButton = "Test";
     console.log(this.valueFromButton);
     
-    // this.router.navigate(['/todos'])
+    this.router.navigate(['/todos'])
   }
 }
