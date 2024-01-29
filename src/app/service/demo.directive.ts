@@ -23,7 +23,6 @@ export class CaseDetailRequiredFieldDirective
 
 
   private createErrorMessage() {
-    debugger
     const h4 = this.renderer.createElement('h4');
     const text = 'This Field is Required';
     const errorText = this.renderer.createText(text);
@@ -38,7 +37,6 @@ export class CaseDetailRequiredFieldDirective
   }
 
   ngOnChanges(): void {
-    debugger
     if (this.caseDetailFieldValidation) {
       this.renderer.nextSibling(
         this.elementRef.nativeElement

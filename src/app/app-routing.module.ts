@@ -35,6 +35,13 @@ const routes: Routes = [
     import('./dynamic-forms/dynamic-forms.module').then(
       (m)=> m.DynamicFormsModule
     )
+  },
+  {
+    path: "external",
+    loadChildren: ()=>
+    import('./external-document/external-document.module').then(
+      (m)=> m.ExternalDocumentModule
+    )
   }
 ];
 
